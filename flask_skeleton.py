@@ -11,6 +11,9 @@ import shutil
 cwd = os.getcwd()
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
+# Jinja2 environment
+template_loader = jinja2.FileSystemLoader(searchpath=os.path.join(script_dir, "templates"))
+template_env = jinja2.Environment(loader=template_loader)
 
 def main(argv):
 
